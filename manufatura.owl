@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/manufatura#"
+     xml:base="http://www.example.org/manufatura"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="http://www.example.org/manufatura"/>
+
+  <owl:Class rdf:ID="Processo"/>
+  <owl:Class rdf:ID="Material"/>
+
+  <owl:ObjectProperty rdf:ID="temMaterial">
+    <rdfs:domain rdf:resource="#Processo"/>
+    <rdfs:range rdf:resource="#Material"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:ID="espessura_maxima">
+    <rdfs:domain rdf:resource="#Processo"/>
+    <rdfs:range rdf:resource="&xsd;float"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:ID="potencia_minima">
+    <rdfs:domain rdf:resource="#Processo"/>
+    <rdfs:range rdf:resource="&xsd;float"/>
+  </owl:DatatypeProperty>
+
+  <owl:NamedIndividual rdf:ID="CorteLaser">
+    <rdf:type rdf:resource="#Processo"/>
+    <temMaterial rdf:resource="#AcoInox"/>
+    <espessura_maxima rdf:datatype="&xsd;float">8.0</espessura_maxima>
+    <potencia_minima rdf:datatype="&xsd;float">2.0</potencia_minima>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:ID="AcoInox">
+    <rdf:type rdf:resource="#Material"/>
+  </owl:NamedIndividual>
+</rdf:RDF>
