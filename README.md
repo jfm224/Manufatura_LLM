@@ -2,7 +2,10 @@
 
 Este projeto permite automatizar a triagem de viabilidade técnica para processos como corte a laser,
 utilizando formulários web, análise de arquivos DXF e inferência semântica via OWL.
-Está dividido em três servidores jails: 1) llm; 2) webFreecad; 3) pretriagem de corte laser e inferência;
+Está dividido em três servidores jails: 
+1) llm com python ollama e ALIENTELLIGENCE/mechanical-engineering;
+2) webFreecad visualização por jupyter do CAM;
+3) pretriagem de corte laser e inferência;
 ## Componentes
 - `laser_custo.py`: calcula o comprimento do corte a partir de um DXF
 - `inferencia_corte_laser.py`: aplica inferência OWL (usando owlready2)
