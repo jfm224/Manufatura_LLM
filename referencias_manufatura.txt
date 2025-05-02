@@ -1,0 +1,26 @@
+
+Fontes e bases técnicas:
+
+1. Machining Data Handbook (Metcut Research)
+   - Índices de usinabilidade, vida útil e parâmetros de corte.
+
+2. ISO 13399 – Representação digital de ferramentas de corte
+   - https://www.iso.org/standard/59875.html
+
+3. Sandvik Coromant Tooling Data
+   - https://www.sandvik.coromant.com
+
+4. Ontologias para manufatura:
+   - MASON Ontology (NIST): https://www.nist.gov/services-resources/software/mason
+   - OntoSTEP: https://github.com/nist/OntoSTEP
+   - OntoCAPE (engenharia de processo): http://www.ontocape.org
+
+5. Owlready2 – Ontologia e raciocínio em Python:
+   - https://owlready2.readthedocs.io
+
+6. SWRL (Semantic Web Rule Language):
+   - https://www.w3.org/Submission/SWRL/
+
+GitHub com exemplos práticos:
+- https://github.com/pchampin/owlready2
+- https://github.com/industrial-ontology/ (diversos padrões OWL para indústria)

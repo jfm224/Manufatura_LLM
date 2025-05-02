@@ -1,0 +1,6 @@
+
+# Requisitos para servidor FreeBSD com Python e OWL
+pkg install python3 py39-pip openjdk17 swipl swig
+
+# Requisitos Python
+pip install rdflib owlready2 swiplserver

@@ -1,0 +1,101 @@
+
+@prefix : <http://www.example.org/manufacturing#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Material a owl:Class .
+:CorteLaser a owl:Class .
+:Restricao a owl:Class .
+
+:temMaterial a owl:ObjectProperty ; rdfs:domain :CorteLaser ; rdfs:range :Material .
+:temRestricao a owl:ObjectProperty ; rdfs:domain :CorteLaser ; rdfs:range :Restricao .
+
+:espessuraMin a owl:DatatypeProperty ; rdfs:domain :Material ; rdfs:range xsd:float .
+:espessuraMax a owl:DatatypeProperty ; rdfs:domain :Material ; rdfs:range xsd:float .
+:potenciaLaserKW a owl:DatatypeProperty ; rdfs:domain :Material ; rdfs:range xsd:float .
+:toleranciaMM a owl:DatatypeProperty ; rdfs:domain :Material ; rdfs:range xsd:float .
+:gasAuxiliar a owl:DatatypeProperty ; rdfs:domain :Material ; rdfs:range xsd:string .
+:qualidadeCorte a owl:DatatypeProperty ; rdfs:domain :Material ; rdfs:range xsd:string .
+:descricao a owl:DatatypeProperty ; rdfs:domain :Restricao ; rdfs:range xsd:string .
+
+
+:Alumínio a :Material ;
+    :espessuraMin 2 ;
+    :espessuraMax 6 ;
+    :potenciaLaserKW 3 ;
+    :toleranciaMM 0.2 ;
+    :gasAuxiliar "Nitrogênio" ;
+    :qualidadeCorte "Classe 2 ISO 9013" .
+
+:Alumínio_Corte a :CorteLaser ;
+    :temMaterial :Alumínio ;
+    :temRestricao :Alumínio_restr_0 ;
+:Alumínio_restr_0 a :Restricao ;
+    :descricao "Alta refletividade térmica" .
+    :temRestricao :Alumínio_restr_1 ;
+:Alumínio_restr_1 a :Restricao ;
+    :descricao "Evitar corte com CO2 laser" .
+    :temRestricao :Alumínio_restr_2 ;
+:Alumínio_restr_2 a :Restricao ;
+    :descricao "Requer limpeza pós-corte para montagem" .
+
+:Aço_chapa_preta a :Material ;
+    :espessuraMin 2 ;
+    :espessuraMax 8 ;
+    :potenciaLaserKW 2 ;
+    :toleranciaMM 0.25 ;
+    :gasAuxiliar "Oxigênio" ;
+    :qualidadeCorte "Classe 3 ISO 9013" .
+
+:Aço_chapa_preta_Corte a :CorteLaser ;
+    :temMaterial :Aço_chapa_preta ;
+    :temRestricao :Aço_chapa_preta_restr_0 ;
+:Aço_chapa_preta_restr_0 a :Restricao ;
+    :descricao "Oxidação da borda aceitável" .
+    :temRestricao :Aço_chapa_preta_restr_1 ;
+:Aço_chapa_preta_restr_1 a :Restricao ;
+    :descricao "Pode ser cortado com CO2 ou Fibra" .
+    :temRestricao :Aço_chapa_preta_restr_2 ;
+:Aço_chapa_preta_restr_2 a :Restricao ;
+    :descricao "Adequado para produção em alto volume" .
+
+:Aço_baixo_carbono a :Material ;
+    :espessuraMin 2 ;
+    :espessuraMax 8 ;
+    :potenciaLaserKW 2.5 ;
+    :toleranciaMM 0.2 ;
+    :gasAuxiliar "Oxigênio" ;
+    :qualidadeCorte "Classe 2 ISO 9013" .
+
+:Aço_baixo_carbono_Corte a :CorteLaser ;
+    :temMaterial :Aço_baixo_carbono ;
+    :temRestricao :Aço_baixo_carbono_restr_0 ;
+:Aço_baixo_carbono_restr_0 a :Restricao ;
+    :descricao "Boa estabilidade térmica" .
+    :temRestricao :Aço_baixo_carbono_restr_1 ;
+:Aço_baixo_carbono_restr_1 a :Restricao ;
+    :descricao "Adequado para aplicações estruturais" .
+    :temRestricao :Aço_baixo_carbono_restr_2 ;
+:Aço_baixo_carbono_restr_2 a :Restricao ;
+    :descricao "Não indicado para acabamento decorativo sem polimento" .
+
+:Aço_inox a :Material ;
+    :espessuraMin 2 ;
+    :espessuraMax 8 ;
+    :potenciaLaserKW 3 ;
+    :toleranciaMM 0.2 ;
+    :gasAuxiliar "Nitrogênio" ;
+    :qualidadeCorte "Classe 2 ISO 9013" .
+
+:Aço_inox_Corte a :CorteLaser ;
+    :temMaterial :Aço_inox ;
+    :temRestricao :Aço_inox_restr_0 ;
+:Aço_inox_restr_0 a :Restricao ;
+    :descricao "Evitar oxidação com uso de Oxigênio" .
+    :temRestricao :Aço_inox_restr_1 ;
+:Aço_inox_restr_1 a :Restricao ;
+    :descricao "Maior custo de gás auxiliar" .
+    :temRestricao :Aço_inox_restr_2 ;
+:Aço_inox_restr_2 a :Restricao ;
+    :descricao "Requer laser de fibra para melhor eficiência" .

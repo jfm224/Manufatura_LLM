@@ -1,0 +1,60 @@
+# Alumínio
+Regra_Alumínio: 
+    Material(?m), 
+    espessuraMin(?m, ?emin), 
+    espessuraMax(?m, ?emax), 
+    potenciaLaserKW(?m, ?p), 
+    toleranciaMM(?m, ?t),
+    gasAuxiliar(?m, ?g), 
+    qualidadeCorte(?m, ?q), 
+    swrlb:greaterThanOrEqual(?esp, ?emin), 
+    swrlb:lessThanOrEqual(?esp, ?emax), 
+    swrlb:greaterThanOrEqual(?pot, ?p), 
+    swrlb:lessThanOrEqual(?tol, ?t) 
+    -> CorteLaser(?c), temMaterial(?c, ?m) .
+
+# Aço chapa preta
+Regra_Aço_chapa_preta: 
+    Material(?m), 
+    espessuraMin(?m, ?emin), 
+    espessuraMax(?m, ?emax), 
+    potenciaLaserKW(?m, ?p), 
+    toleranciaMM(?m, ?t),
+    gasAuxiliar(?m, ?g), 
+    qualidadeCorte(?m, ?q), 
+    swrlb:greaterThanOrEqual(?esp, ?emin), 
+    swrlb:lessThanOrEqual(?esp, ?emax), 
+    swrlb:greaterThanOrEqual(?pot, ?p), 
+    swrlb:lessThanOrEqual(?tol, ?t) 
+    -> CorteLaser(?c), temMaterial(?c, ?m) .
+
+# Aço baixo carbono
+Regra_Aço_baixo_carbono: 
+    Material(?m), 
+    espessuraMin(?m, ?emin), 
+    espessuraMax(?m, ?emax), 
+    potenciaLaserKW(?m, ?p), 
+    toleranciaMM(?m, ?t),
+    gasAuxiliar(?m, ?g), 
+    qualidadeCorte(?m, ?q), 
+    swrlb:greaterThanOrEqual(?esp, ?emin), 
+    swrlb:lessThanOrEqual(?esp, ?emax), 
+    swrlb:greaterThanOrEqual(?pot, ?p), 
+    swrlb:lessThanOrEqual(?tol, ?t) 
+    -> CorteLaser(?c), temMaterial(?c, ?m) .
+
+# Aço inox
+Regra_Aço_inox: 
+    Material(?m), 
+    espessuraMin(?m, ?emin), 
+    espessuraMax(?m, ?emax), 
+    potenciaLaserKW(?m, ?p), 
+    toleranciaMM(?m, ?t),
+    gasAuxiliar(?m, ?g), 
+    qualidadeCorte(?m, ?q), 
+    swrlb:greaterThanOrEqual(?esp, ?emin), 
+    swrlb:lessThanOrEqual(?esp, ?emax), 
+    swrlb:greaterThanOrEqual(?pot, ?p), 
+    swrlb:lessThanOrEqual(?tol, ?t) 
+    -> CorteLaser(?c), temMaterial(?c, ?m) .
+

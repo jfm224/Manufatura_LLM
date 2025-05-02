@@ -1,0 +1,32 @@
+{
+    "peca": {
+        "material": "Inconel 718",
+        "lote": 5,
+        "tolerancia": "\u00b10.01mm",
+        "processo": "CNC fresagem"
+    },
+    "restricoes": {
+        "usinabilidade": {
+            "nivel": "baixa",
+            "causas": [
+                "dureza elevada",
+                "baixa condutividade t\u00e9rmica",
+                "forma\u00e7\u00e3o de aresta posti\u00e7a"
+            ]
+        },
+        "ferramenta": {
+            "tipo": "CBN",
+            "custo_unitario": 250.0,
+            "vida_util_estimativa": "2 pe\u00e7as por aresta"
+        },
+        "impacto": {
+            "custo_unitario_estimado": "alto",
+            "risco": "alto desgaste prematuro",
+            "recomendacao": [
+                "avaliar uso de torneamento duro ou EDM",
+                "aumentar lote para dilui\u00e7\u00e3o de custo",
+                "verificar fornecedor com expertise em Inconel"
+            ]
+        }
+    }
+}

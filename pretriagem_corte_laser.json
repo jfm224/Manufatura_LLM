@@ -1,0 +1,60 @@
+{
+  "materiais": [
+    {
+      "nome": "Alum\u00ednio",
+      "espessura_min": 2,
+      "espessura_max": 6,
+      "potencia_laser_kw": 3,
+      "gas_auxiliar": "Nitrog\u00eanio",
+      "tolerancia_mm": 0.2,
+      "qualidade_corte": "Classe 2 ISO 9013",
+      "restricoes": [
+        "Alta refletividade t\u00e9rmica",
+        "Evitar corte com CO2 laser",
+        "Requer limpeza p\u00f3s-corte para montagem"
+      ]
+    },
+    {
+      "nome": "A\u00e7o chapa preta",
+      "espessura_min": 2,
+      "espessura_max": 8,
+      "potencia_laser_kw": 2,
+      "gas_auxiliar": "Oxig\u00eanio",
+      "tolerancia_mm": 0.25,
+      "qualidade_corte": "Classe 3 ISO 9013",
+      "restricoes": [
+        "Oxida\u00e7\u00e3o da borda aceit\u00e1vel",
+        "Pode ser cortado com CO2 ou Fibra",
+        "Adequado para produ\u00e7\u00e3o em alto volume"
+      ]
+    },
+    {
+      "nome": "A\u00e7o baixo carbono",
+      "espessura_min": 2,
+      "espessura_max": 8,
+      "potencia_laser_kw": 2.5,
+      "gas_auxiliar": "Oxig\u00eanio",
+      "tolerancia_mm": 0.2,
+      "qualidade_corte": "Classe 2 ISO 9013",
+      "restricoes": [
+        "Boa estabilidade t\u00e9rmica",
+        "Adequado para aplica\u00e7\u00f5es estruturais",
+        "N\u00e3o indicado para acabamento decorativo sem polimento"
+      ]
+    },
+    {
+      "nome": "A\u00e7o inox",
+      "espessura_min": 2,
+      "espessura_max": 8,
+      "potencia_laser_kw": 3,
+      "gas_auxiliar": "Nitrog\u00eanio",
+      "tolerancia_mm": 0.2,
+      "qualidade_corte": "Classe 2 ISO 9013",
+      "restricoes": [
+        "Evitar oxida\u00e7\u00e3o com uso de Oxig\u00eanio",
+        "Maior custo de g\u00e1s auxiliar",
+        "Requer laser de fibra para melhor efici\u00eancia"
+      ]
+    }
+  ]
+}

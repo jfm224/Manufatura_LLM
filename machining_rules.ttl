@@ -1,0 +1,24 @@
+@prefix : <http://example.com/cam#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Peça a owl:Class .
+:temMaterial a owl:ObjectProperty .
+:temTolerancia a owl:DatatypeProperty .
+:podeUsarFerramenta a owl:ObjectProperty .
+
+# Regra: Se tolerância > 0.04 e material difícil, pode usar ferramenta mais barata
+[
+  a swrl:Imp ;
+  swrl:body (
+    [ swrl:classPredicate :Peça ; swrl:argument1 ?p ]
+    [ swrl:propertyPredicate :temMaterial ; swrl:argument1 ?p ; swrl:argument2 ?m ]
+    [ swrl:propertyPredicate :temTolerancia ; swrl:argument1 ?p ; swrl:argument2 ?t ]
+    [ swrlb:greaterThan ?t 0.04 ]
+    [ swrlb:stringEqualIgnoreCase ?m "Inconel 718" ]
+  ) ;
+  swrl:head (
+    [ swrl:propertyPredicate :podeUsarFerramenta ; swrl:argument1 ?p ; swrl:argument2 :Carbeto ]
+  )
+] .

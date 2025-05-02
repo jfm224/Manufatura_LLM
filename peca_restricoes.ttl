@@ -1,0 +1,29 @@
+@prefix : <http://example.com/cam#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:peca001 rdf:type :Peça ;
+         :temMaterial :Inconel718 ;
+         :lote "5"^^xsd:integer ;
+         :tolerancia "0.01"^^xsd:float ;
+         :requer :FresagemCNC ;
+         :temRestricao :restricao001 .
+
+:Inconel718 rdf:type :Material ;
+            :usinabilidade "baixa" ;
+            :dureza "alta" ;
+            :condutividadeTermica "baixa" .
+
+:restricao001 rdf:type :RestricaoUsinagem ;
+              :envolveFerramenta :cbnTool001 ;
+              :risco "altoDesgaste" ;
+              :custoUnitarioEstimado "alto" ;
+              :sugere :recomendacao001 .
+
+:cbnTool001 rdf:type :Ferramenta ;
+            :tipo "CBN" ;
+            :custoUnitario "250.0"^^xsd:float ;
+            :vidaUtilEstimada "2"^^xsd:integer .
+
+:recomendacao001 rdf:type :Recomendacao ;
+                 :texto "Avaliar EDM ou aumentar lote para diluir custo." .
